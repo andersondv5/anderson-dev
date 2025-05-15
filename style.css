@@ -297,6 +297,7 @@ header.intro {
 
 .projetos-link{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
@@ -382,6 +383,10 @@ span{
 
   *{
     scroll-padding: 60px;
+  }
+
+  .btn-contato{
+    font-size: 10px;
   }
 
   .menu {
