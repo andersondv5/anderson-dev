@@ -1,21 +1,22 @@
 // animação ao scroll
 const elements = document.querySelectorAll('.reveal');
 
-  function revealOnScroll() {
-    const windowMiddle = window.innerHeight / 1;
+function revealOnScroll() {
+  const triggerBottom = window.innerHeight * 0.6;
 
-    elements.forEach(el => {
-      const rect = el.getBoundingClientRect();
-      const elementMiddle = rect.top + rect.height / 1;
+  elements.forEach(el => {
+    const elementTop = el.getBoundingClientRect().top;
 
-      if (elementMiddle < windowMiddle) {
-        el.classList.add('active');
-      }
-    });
-  }
+    if (elementTop < triggerBottom) {
+      el.classList.add('active');
+    } else {
+      el.classList.remove('active'); // opcional: se quiser voltar ao estado original
+    }
+  });
+}
 
-  window.addEventListener('scroll', revealOnScroll);
-  window.addEventListener('load', revealOnScroll);
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
 
 // bolinha carregando
 window.addEventListener("load", () => {
