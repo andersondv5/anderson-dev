@@ -28,6 +28,7 @@ setTimeout(() => {
 }, 500);
 });
 
+
 window.scrollTo(0, 0);
 
 
