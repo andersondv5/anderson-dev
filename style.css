@@ -345,6 +345,10 @@ span{
 /* Responsividade */
 @media (max-width: 768px) {
 
+  *{
+    scroll-padding: 30px;
+  }
+
   .menu {
     gap: 20px;
     padding-top: 40px;
