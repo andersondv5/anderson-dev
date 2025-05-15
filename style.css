@@ -346,7 +346,7 @@ span{
 @media (max-width: 768px) {
 
   *{
-    scroll-padding: 30px;
+    scroll-padding: 60px;
   }
 
   .menu {
