@@ -18,6 +18,15 @@ function revealOnScroll() {
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
 
+// limpa URL
+(function() {
+  const url = new URL(window.location);
+  if (url.searchParams.has('fbclid')) {
+    url.searchParams.delete('fbclid');
+    window.history.replaceState({}, document.title, url.pathname + url.search);
+  }
+})();
+
 // bolinha carregando
 window.addEventListener("load", () => {
 const preloader = document.getElementById("preloader");
